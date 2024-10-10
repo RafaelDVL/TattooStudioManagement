@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\data\\configurations\\produtoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:data\\configurations\\produtoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\interfaces\\irepositories\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:interfaces\\irepositories\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\data\\configurations\\fornecedorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:data\\configurations\\fornecedorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:controllers\\fornecedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\interfaces\\iservices\\iservicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:interfaces\\iservices\\iservicebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|c:\\users\\rafae\\source\\local\\studiotattoomanagement\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3FF78E1C-ADCE-4F3D-A58A-E5A9FCF1A99E}|StudioTattooManagement.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Interfaces\\Irepositories\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Irepositories\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Interfaces\\Irepositories\\IProdutoRepository.cs",
+              "RelativeToolTip": "Interfaces\\Irepositories\\IProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T18:55:46.896Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FornecedorConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\Configurations\\FornecedorConfiguration.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\FornecedorConfiguration.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\Configurations\\FornecedorConfiguration.cs",
+              "RelativeToolTip": "Data\\Configurations\\FornecedorConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:50:17.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdutoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\Configurations\\ProdutoConfiguration.cs",
+              "RelativeDocumentMoniker": "Data\\Configurations\\ProdutoConfiguration.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\Configurations\\ProdutoConfiguration.cs",
+              "RelativeToolTip": "Data\\Configurations\\ProdutoConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:46:52.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T18:23:42.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T18:43:25.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Models\\Produto.cs",
+              "RelativeToolTip": "Models\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T18:53:05.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FornecedorController.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Controllers\\FornecedorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FornecedorController.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Controllers\\FornecedorController.cs",
+              "RelativeToolTip": "Controllers\\FornecedorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:36:07.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IServiceBase.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Interfaces\\Iservices\\IServiceBase.cs",
+              "RelativeDocumentMoniker": "Interfaces\\Iservices\\IServiceBase.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Interfaces\\Iservices\\IServiceBase.cs",
+              "RelativeToolTip": "Interfaces\\Iservices\\IServiceBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:36:57.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "Repositories\\ProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:18:11.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T00:15:55.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "Services\\ProdutoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T19:17:52.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-09T18:24:25.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-09T18:23:38.795Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
