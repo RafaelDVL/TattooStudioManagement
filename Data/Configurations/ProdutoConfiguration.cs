@@ -14,6 +14,9 @@ namespace StudioTattooManagement.Data.Configurations
             // Configurações das propriedades
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+
             builder.Property(p => p.Nome)
                 .IsRequired()
                 .HasMaxLength(100);
@@ -27,8 +30,7 @@ namespace StudioTattooManagement.Data.Configurations
             builder.Property(p => p.CodigoDeBarras)
                 .HasMaxLength(20);
 
-            builder.Property(p => p.QuantidadeEmEstoque)
-                .IsRequired();
+            builder.Property(p => p.QuantidadeEmEstoque);
 
             builder.Property(p => p.EstoqueMinimo)
                 .IsRequired();

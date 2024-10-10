@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudioTattooManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fca3c6b78ccbf4cc64ccaf2b86955ef7418173c")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudioTattooManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudioTattooManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

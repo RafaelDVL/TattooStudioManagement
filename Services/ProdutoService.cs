@@ -4,6 +4,7 @@ using StudioTattooManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using StudioTattooManagement.Interfaces.Irepositories;
 using StudioTattooManagement.Repositories;
+using System.Collections.Generic;
 
 namespace StudioTattooManagement.Services
 {
@@ -72,6 +73,20 @@ namespace StudioTattooManagement.Services
         {
             var produto = ObterPorId(produtoId);
             produto.RemoverEstoque(quantidade);
+            _produtoRepository.SaveChanges();
+        }
+
+        public void AdicionarFoto(int produtoId, string fotoUrl)
+        {
+            var produto = ObterPorId(produtoId);
+            produto.AdicionarFoto(fotoUrl);
+            _produtoRepository.SaveChanges();
+        }
+
+        public void RemoverFoto(int produtoId, string fotoUrl)
+        {
+            var produto = ObterPorId(produtoId);
+            produto.RemoverFoto(fotoUrl);
             _produtoRepository.SaveChanges();
         }
     }

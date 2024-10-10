@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StudioTattooManagement.Interfaces.Iservices;
 using StudioTattooManagement.Models;
 
@@ -36,35 +37,54 @@ namespace StudioTattooManagement.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromForm] Fornecedor fornecedor, IFormFile foto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
 
-            // Verifica se há uma foto
-            if (foto != null && foto.Length > 0)
+            try
             {
-                // Verifica se o diretório de imagens existe, senão cria.
-                if (!Directory.Exists(_imageDirectory))
-                    Directory.CreateDirectory(_imageDirectory);
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-                // Define um nome único para o arquivo de imagem
-                var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(foto.FileName)}";
-                var filePath = Path.Combine(_imageDirectory, fileName);
-
-                // Salva a imagem no diretório "C:\images"
-                using (var stream = new FileStream(filePath, FileMode.Create))
+                // Verifica se há uma foto
+                if (foto != null && foto.Length > 0)
                 {
-                    await foto.CopyToAsync(stream);
+                    // Verifica se o diretório de imagens existe, senão cria.
+                    if (!Directory.Exists(_imageDirectory))
+                        Directory.CreateDirectory(_imageDirectory);
+
+                    // Define um nome único para o arquivo de imagem
+                    var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(foto.FileName)}";
+                    var filePath = Path.Combine(_imageDirectory, fileName);
+
+                    // Salva a imagem no diretório "C:\images"
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await foto.CopyToAsync(stream);
+                    }
+
+                    // Salva o caminho da imagem no fornecedor (salvando o caminho completo ou apenas o nome do arquivo)
+                    fornecedor.ImagemUrl = filePath;
                 }
 
-                // Salva o caminho da imagem no fornecedor (salvando o caminho completo ou apenas o nome do arquivo)
-                fornecedor.ImagemUrl = filePath;
+                // Adiciona o fornecedor ao banco de dados
+                await _fornecedorService.AddAsync(fornecedor);
+                await _fornecedorService.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(Get), new { id = fornecedor.Id }, fornecedor);
             }
-
-            // Adiciona o fornecedor ao banco de dados
-            await _fornecedorService.AddAsync(fornecedor);
-            await _fornecedorService.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(Get), new { id = fornecedor.Id }, fornecedor);
+            catch (DbUpdateException ex)
+            {
+                // Retornar um erro 500 com uma mensagem personalizada
+                return StatusCode(500, "Ocorreu um erro ao salvar o fornecedor. Por favor, tente novamente mais tarde.");
+            }
+            catch (IOException ex)
+            {
+                // Retornar um erro 500 com uma mensagem personalizada
+                return StatusCode(500, "Ocorreu um erro ao salvar a imagem do fornecedor. Por favor, verifique as permissões do diretório de imagens.");
+            }
+            catch (Exception ex)
+            {
+                // Retornar um erro 500 com uma mensagem genérica
+                return StatusCode(500, "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.");
+            }
         }
 
         [HttpPut("{id}")]

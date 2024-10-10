@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "05rHjq2qz+M=",
+  "dgSpecHash": "d+upxkkOqKk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\StudioTattooManagement.csproj",
+  "projectFilePath": "C:\\Users\\rafae\\Estudo\\TattooStudioManagement\\StudioTattooManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

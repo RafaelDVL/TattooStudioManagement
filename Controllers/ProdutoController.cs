@@ -42,17 +42,27 @@ namespace StudioTattooManagement.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Produto produto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
 
             try
             {
+                // Adicionar o produto usando o serviço
                 _produtoService.AdicionarProduto(produto);
-                return CreatedAtAction(nameof(Get), new { id = produto.Id }, produto);
+
+                // Retornar a resposta com CreatedAtAction para incluir o recurso recém-criado
+                return CreatedAtAction(
+                    nameof(Get),
+                    new { id = produto.Id },
+                    produto);
             }
-            catch (ArgumentNullException ex)
+            catch (ArgumentException ex)
             {
-                return BadRequest(new { Message = ex.Message });
+                // Captura ArgumentException que pode incluir ArgumentNullException e outras
+                return BadRequest(new { Message = "Erro de validação nos dados do produto.", Detalhe = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                // Captura erros inesperados e retorna uma resposta de erro genérica
+                return StatusCode(500, new { Message = "Ocorreu um erro ao processar a solicitação.", Detalhe = ex.Message });
             }
         }
 

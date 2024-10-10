@@ -1,42 +1,58 @@
 ﻿using StudioTattooManagement.Utils.UtilsClasses;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudioTattooManagement.Models
 {
     public class Produto
     {
+        [Key]
         public int Id { get; set; }
+
+        [Required]
         public int fornecedor_codigoId { get; set; }
 
+        [Required]
         public string Nome { get; set; }
 
+        [Required]
         public string Descricao { get; set; }
 
+        [Required]
         public Preco Preco { get; set; }
 
-        public int QuantidadeEmEstoque { get; private set; }
+        public int? QuantidadeEmEstoque { get; private set; }
 
         public DateTime DataUltimaAtualizacao { get; private set; }
 
+        [Required]
         public string Categoria { get; set; }
 
-        public string CodigoDeBarras { get; set; }
+        public string? CodigoDeBarras { get; set; }
 
-        public Fornecedor Fornecedor { get; set; }
-
+        [Required]
         public int EstoqueMinimo { get; set; }
 
-        public Produto() { }
+        // Lista de URLs ou paths das imagens do produto
+        public List<string> Fotos { get; private set; }
+
+        
+        public virtual Fornecedor Fornecedor { get; set; }
+
+        public Produto()
+        {
+            Fotos = new List<string>();
+        }
 
         public Produto(
-    string nome,
-    string descricao,
-    Preco preco,
-    int quantidadeInicial,
-    string categoria,
-    string codigoDeBarras,
-    int fornecedorCodigoId,
-    int estoqueMinimo)
+            string nome,
+            string descricao,
+            Preco preco,
+            int quantidadeInicial,
+            string categoria,
+            string codigoDeBarras,
+            int fornecedorCodigoId,
+            int estoqueMinimo) : this()
         {
             if (string.IsNullOrWhiteSpace(nome))
                 throw new ArgumentException("O nome do produto não pode ser vazio.", nameof(nome));
@@ -55,6 +71,21 @@ namespace StudioTattooManagement.Models
             CodigoDeBarras = codigoDeBarras;
             fornecedor_codigoId = fornecedorCodigoId;
             EstoqueMinimo = estoqueMinimo;
+            DataUltimaAtualizacao = DateTime.UtcNow;
+        }
+
+        public void AdicionarFoto(string fotoUrl)
+        {
+            if (Fotos.Count >= 5)
+                throw new InvalidOperationException("O produto não pode ter mais de 5 fotos.");
+
+            Fotos.Add(fotoUrl);
+            DataUltimaAtualizacao = DateTime.UtcNow;
+        }
+
+        public void RemoverFoto(string fotoUrl)
+        {
+            Fotos.Remove(fotoUrl);
             DataUltimaAtualizacao = DateTime.UtcNow;
         }
 
@@ -78,7 +109,6 @@ namespace StudioTattooManagement.Models
             QuantidadeEmEstoque -= quantidade;
             DataUltimaAtualizacao = DateTime.UtcNow;
 
-            // Verificar se o estoque está abaixo do mínimo e disparar alerta (exemplo)
             if (QuantidadeEmEstoque < EstoqueMinimo)
             {
                 Console.WriteLine($"Alerta: O estoque do produto '{Nome}' está abaixo do mínimo de {EstoqueMinimo} unidades.");
