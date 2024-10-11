@@ -48,8 +48,7 @@ namespace StudioTattooManagement.Data.Configurations
             builder.HasOne(p => p.Fornecedor)
                 .WithMany(f => f.Produtos)
                 .HasForeignKey(p => p.fornecedor_codigoId)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired();
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

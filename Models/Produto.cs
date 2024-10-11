@@ -37,7 +37,7 @@ namespace StudioTattooManagement.Models
         public List<string> Fotos { get; private set; }
 
         
-        public virtual Fornecedor Fornecedor { get; set; }
+        public virtual Fornecedor? Fornecedor { get; set; }
 
         public Produto()
         {

@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" style="display: flex; justify-content: space-between; ">
+  <div class="box1">
+    <button mat-icon-button aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+      TattooStudioManagement
+    </button>
+  </div>
+  <div class="box2">
+    <button mat-button (click)="redirection('')">Home</button>
+    <button mat-button (click)="redirection('produto')"><mat-icon>account_circle</mat-icon>Produtos</button>
+    <button mat-button (click)="redirection('fornecedor')"><mat-icon>account_circle</mat-icon>Fornecedores</button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
