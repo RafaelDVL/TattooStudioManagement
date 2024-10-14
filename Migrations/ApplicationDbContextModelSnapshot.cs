@@ -76,7 +76,7 @@ namespace StudioTattooManagement.Migrations
                     b.Property<int>("EstoqueMinimo")
                         .HasColumnType("int");
 
-                    b.Property<string>("Fotos")
+                    b.Property<string>("ImagemUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

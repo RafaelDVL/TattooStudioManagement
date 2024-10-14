@@ -305,3 +305,10 @@ C:\Users\rafae\Estudo\TattooStudioManagement\obj\Debug\net8.0\refint\StudioTatto
 C:\Users\rafae\Estudo\TattooStudioManagement\obj\Debug\net8.0\StudioTattooManagement.pdb
 C:\Users\rafae\Estudo\TattooStudioManagement\obj\Debug\net8.0\StudioTattooManagement.genruntimeconfig.cache
 C:\Users\rafae\Estudo\TattooStudioManagement\obj\Debug\net8.0\ref\StudioTattooManagement.dll
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\angular.json
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\package-lock.json
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\package.json
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\tsconfig.app.json
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\tsconfig.json
+C:\Users\rafae\source\local\StudioTattooManagement\bin\Debug\net8.0\Front\TattooStudioManagement\tsconfig.spec.json
+C:\Users\rafae\source\local\StudioTattooManagement\obj\Debug\net8.0\StudioTattooManagement.sourcelink.json

@@ -34,14 +34,14 @@ namespace StudioTattooManagement.Models
         public int EstoqueMinimo { get; set; }
 
         // Lista de URLs ou paths das imagens do produto
-        public List<string> Fotos { get; private set; }
+        public string ImagemUrl { get; set; }
 
         
         public virtual Fornecedor? Fornecedor { get; set; }
 
         public Produto()
         {
-            Fotos = new List<string>();
+
         }
 
         public Produto(
@@ -74,20 +74,6 @@ namespace StudioTattooManagement.Models
             DataUltimaAtualizacao = DateTime.UtcNow;
         }
 
-        public void AdicionarFoto(string fotoUrl)
-        {
-            if (Fotos.Count >= 5)
-                throw new InvalidOperationException("O produto não pode ter mais de 5 fotos.");
-
-            Fotos.Add(fotoUrl);
-            DataUltimaAtualizacao = DateTime.UtcNow;
-        }
-
-        public void RemoverFoto(string fotoUrl)
-        {
-            Fotos.Remove(fotoUrl);
-            DataUltimaAtualizacao = DateTime.UtcNow;
-        }
 
         public void AdicionarEstoque(int quantidade)
         {

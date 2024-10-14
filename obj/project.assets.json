@@ -4634,11 +4634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafae\\Estudo\\TattooStudioManagement\\StudioTattooManagement.csproj",
+      "projectUniqueName": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\StudioTattooManagement.csproj",
       "projectName": "StudioTattooManagement",
-      "projectPath": "C:\\Users\\rafae\\Estudo\\TattooStudioManagement\\StudioTattooManagement.csproj",
+      "projectPath": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\StudioTattooManagement.csproj",
       "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafae\\Estudo\\TattooStudioManagement\\obj\\",
+      "outputPath": "C:\\Users\\rafae\\source\\local\\StudioTattooManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

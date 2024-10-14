@@ -1,0 +1,41 @@
+.boxButton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+  .id-column {
+    width: 50px;  /* Define largura fixa de 50px para a coluna de ID */
+  }
+
+  .action-column {
+    width: 50px;  /* Define largura fixa de 50px para a coluna de ID */
+  }
+  
+  .nome-column {
+    width: 200px; /* Define largura fixa de 200px para a coluna de nome */
+  }
+  
+  .linkUltimaCompra-column {
+    width: 300px; /* Define largura fixa de 300px para o link */
+  }
+  
+  .imagemUrl-column {
+    width: 100px; /* Define largura fixa de 100px para a imagem */
+  }
+
+  .custom-link {
+    color: #00dddd; /* Cor padrão do link */
+    text-decoration: none; /* Remove o sublinhado, se desejar */
+  }
+  
+  /* Estilo do link quando o mouse passa sobre ele */
+  .custom-link:hover {
+    color: #00f0f0; /* Cor quando o link é "hovered" */
+    text-decoration: underline; /* Você pode colocar o sublinhado de volta no hover */
+  }
+  
+  /* Estilo do link quando já foi visitado */
+  .custom-link:visited {
+    color: purple; /* Cor para links visitados */
+  }

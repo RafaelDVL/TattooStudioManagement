@@ -12,7 +12,5 @@ namespace StudioTattooManagement.Interfaces.Iservices
         void AdicionarEstoque(int produtoId, int quantidade);
         void RemoverEstoque(int produtoId, int quantidade);
 
-        void AdicionarFoto(int produtoId, string fotoUrl);
-        void RemoverFoto(int produtoId, string fotoUrl);
     }
 }

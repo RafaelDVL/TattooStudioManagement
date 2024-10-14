@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20241010123207_initial.cs" />
+    <Compile Remove="Migrations\20241010123207_initial.Designer.cs" />
+    <Compile Remove="Migrations\20241010132732_alterTables.cs" />
+    <Compile Remove="Migrations\20241010132732_alterTables.Designer.cs" />
+    <Compile Remove="Migrations\20241010193533_ajuste.cs" />
+    <Compile Remove="Migrations\20241010193533_ajuste.Designer.cs" />
+    <Compile Remove="Migrations\20241010193801_ajsutes.cs" />
+    <Compile Remove="Migrations\20241010193801_ajsutes.Designer.cs" />
+    <Compile Remove="Migrations\20241010205238_ajsuteProduto.cs" />
+    <Compile Remove="Migrations\20241010205238_ajsuteProduto.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
@@ -26,9 +39,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Mappings\" />
     <Folder Include="Config\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Arquivos\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

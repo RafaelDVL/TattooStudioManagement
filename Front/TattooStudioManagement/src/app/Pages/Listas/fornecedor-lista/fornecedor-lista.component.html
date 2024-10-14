@@ -1,4 +1,8 @@
 <mat-card class="container">
+  <div class="boxButton">
+    <button mat-flat-button (click)="redirection('fornecedor/cadastro')"><mat-icon>add</mat-icon>Adicionar
+      Fornecedor</button>
+  </div>
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
@@ -8,28 +12,53 @@
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->
-      <ng-container matColumnDef="id">
+      <ng-container matColumnDef="id" class="id-column">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        <td mat-cell *matCellDef="let row" class="id-column"> {{row.id}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
-      <ng-container matColumnDef="progress">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-        <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+      <!-- action Column -->
+      <ng-container matColumnDef="action" class="action-column">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ação </th>
+        <td mat-cell *matCellDef="let row" class="action-column">
+          <!-- Botão de Visualizar -->
+          <button mat-icon-button color="primary" (click)="visualizar(row)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <!-- Botão de Editar -->
+          <button mat-icon-button color="accent" (click)="editar(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <!-- Botão de Apagar -->
+          <button mat-icon-button color="warn" (click)="apagar(row)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
       </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      <!-- nome Column -->
+      <ng-container matColumnDef="nome" class="nome-column">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+        <td mat-cell *matCellDef="let row" class="nome-column"> {{row.nome}} </td>
       </ng-container>
 
-      <!-- Fruit Column -->
-      <ng-container matColumnDef="fruit">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-        <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+      <!-- linkUltimaCompra Column -->
+      <ng-container matColumnDef="linkUltimaCompra" class="linkUltimaCompra-column">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Link </th>
+        <td mat-cell *matCellDef="let row" class="linkUltimaCompra-column">
+          <a [href]="row.linkUltimaCompra" target="_blank" rel="noopener noreferrer"
+            class="custom-link">{{row.linkUltimaCompra}}</a>
+        </td>
       </ng-container>
+
+      <!-- imagemUrl Column -->
+      <ng-container matColumnDef="imagemUrl" class="imagemUrl-column">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Imagem </th>
+        <td mat-cell *matCellDef="let row" class="imagemUrl-column">
+          <img [src]="'https://localhost:44351' + row.imagemUrl" alt="Logo do Fornecedor" width="30" height="30" />
+        </td>
+      </ng-container>
+
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -43,5 +72,3 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
 </mat-card>
-
-

@@ -16,38 +16,7 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Nome",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "LinkUltimaCompra",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImagemUrl",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Produtos",
-        "Type": "System.Collections.Generic.ICollection\u00601[[StudioTattooManagement.Models.Produto, StudioTattooManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "foto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -78,36 +47,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Nome",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "LinkUltimaCompra",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImagemUrl",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Produtos",
-        "Type": "System.Collections.Generic.ICollection\u00601[[StudioTattooManagement.Models.Produto, StudioTattooManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "foto",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -131,7 +70,7 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "Get",
-    "RelativePath": "Produto",
+    "RelativePath": "api/Produto",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -141,23 +80,17 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "Post",
-    "RelativePath": "Produto",
+    "RelativePath": "api/Produto",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "produto",
-        "Type": "StudioTattooManagement.Models.Produto",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "Get",
-    "RelativePath": "Produto/{id}",
+    "RelativePath": "api/Produto/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -173,7 +106,7 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "Put",
-    "RelativePath": "Produto/{id}",
+    "RelativePath": "api/Produto/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -194,7 +127,7 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "Delete",
-    "RelativePath": "Produto/{id}",
+    "RelativePath": "api/Produto/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -210,7 +143,7 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "AdicionarEstoque",
-    "RelativePath": "Produto/{id}/adicionar-estoque/{quantidade}",
+    "RelativePath": "api/Produto/{id}/adicionar-estoque/{quantidade}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -231,7 +164,7 @@
   {
     "ContainingType": "StudioTattooManagement.Controllers.ProdutoController",
     "Method": "RemoverEstoque",
-    "RelativePath": "Produto/{id}/remover-estoque/{quantidade}",
+    "RelativePath": "api/Produto/{id}/remover-estoque/{quantidade}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,

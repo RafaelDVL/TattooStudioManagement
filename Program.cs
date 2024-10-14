@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using StudioTattooManagement.Data;
 using StudioTattooManagement.Interfaces.Irepositories;
 using StudioTattooManagement.Interfaces.Iservices;
@@ -26,7 +27,27 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200") // Endereço do seu frontend
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Arquivos")),
+    RequestPath = "/Arquivos"
+});
+
+
+app.UseCors("AllowSpecificOrigin");
 
 // Configuração do pipeline HTTP
 if (app.Environment.IsDevelopment())

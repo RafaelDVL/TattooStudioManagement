@@ -20,7 +20,6 @@ import { routes } from './app.routes';
   declarations: [
   ],
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -31,7 +30,8 @@ import { routes } from './app.routes';
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    BrowserModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

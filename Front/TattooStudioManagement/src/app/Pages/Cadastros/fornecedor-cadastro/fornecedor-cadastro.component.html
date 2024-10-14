@@ -1,1 +1,36 @@
-<p>fornecedor-cadastro works!</p>
+<div class="example-container">
+    <mat-form-field>
+      <mat-label>Nome do Fornecedor</mat-label>
+      <input
+        matInput
+        placeholder="Digite o nome do fornecedor"
+        [formControl]="fornecedorForm.controls['nome']"
+        (blur)="updateErrorMessage('nome')"
+        required
+      />
+      <mat-error *ngIf="fornecedorForm.controls['nome'].invalid">{{ errorMessage().nome }}</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Link da Última Compra</mat-label>
+      <input
+        matInput
+        placeholder="https://example.com/compra"
+        [formControl]="fornecedorForm.controls['linkUltimaCompra']"
+        (blur)="updateErrorMessage('linkUltimaCompra')"
+      />
+      <mat-error *ngIf="fornecedorForm.controls['linkUltimaCompra'].invalid">{{ errorMessage().linkUltimaCompra }}</mat-error>
+    </mat-form-field>
+  
+    <div class="form-group file-input-container">
+        <label class="file-label">Logo fornecedor</label>
+        <button type="button" mat-raised-button [disabled]="blockButtons" (click)="fileInput.click()"><mat-icon>attach_file</mat-icon>Choose File</button>
+        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+    </div>
+  
+    <div class="button-container">
+      <button mat-raised-button color="primary" [disabled]="blockButtons" (click)="salvarFornecedor()">Salvar</button>
+      <button mat-raised-button color="warn" (click)="cancelar('fornecedor')">Cancelar</button>
+    </div>
+  </div>
+  

@@ -1,1 +1,121 @@
-<p>produto-cadastro works!</p>
+<div class="container">
+  <div class="contentRow">
+    <div class="separadores">
+      <mat-form-field>
+        <mat-label>Nome do Produto</mat-label>
+        <input matInput placeholder="Digite o nome do produto" [formControl]="produtoForm.controls['nome']"
+          (blur)="updateErrorMessage('nome')" required />
+        <mat-error *ngIf="produtoForm.controls['nome'].invalid">{{ errorMessage().nome }}</mat-error>
+      </mat-form-field>
+  
+      <!-- Descrição do Produto -->
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input matInput placeholder="Digite a descrição do produto" [formControl]="produtoForm.controls['descricao']"
+          (blur)="updateErrorMessage('descricao')" required />
+        <mat-error *ngIf="produtoForm.controls['descricao'].invalid">{{ errorMessage().descricao }}</mat-error>
+      </mat-form-field>
+  
+      <!-- Preço do Produto -->
+      <mat-form-field appearance="fill">
+        <mat-label>Preço</mat-label>
+        <input matInput type="text" placeholder="Digite o preço" [formControl]="produtoForm.controls['preco']"
+          mask="separator.2" prefix="R$ " thousandSeparator="." decimalMarker="," [dropSpecialCharacters]="true"
+          (blur)="updateErrorMessage('preco')" required />
+        <mat-error *ngIf="produtoForm.controls['preco'].hasError('required')">Preço é obrigatório</mat-error>
+      </mat-form-field>
+  
+  
+      <!-- Quantidade em Estoque -->
+      <mat-form-field>
+        <mat-label>Quantidade em Estoque</mat-label>
+        <input matInput type="number" placeholder="Digite a quantidade em estoque"
+          [formControl]="produtoForm.controls['quantidadeEmEstoque']"
+          (blur)="updateErrorMessage('quantidadeEmEstoque')" />
+        <mat-error *ngIf="produtoForm.controls['quantidadeEmEstoque'].invalid">{{ errorMessage().quantidadeEmEstoque
+          }}</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="separadores">
+      <!-- Fornecedor -->
+      <mat-form-field>
+        <mat-label>Fornecedor</mat-label>
+        <mat-select [formControl]="produtoForm.controls['fornecedor_codigoId']" required>
+          <mat-option [value]=0>Selecione...</mat-option>
+          <mat-option *ngFor="let fornecedor of fornecedores" [value]="fornecedor.id">
+            {{ fornecedor.nome }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="produtoForm.controls['fornecedor_codigoId'].invalid">
+          {{ errorMessage().fornecedor_codigoId }}
+        </mat-error>
+      </mat-form-field>
+  
+      <!-- Categoria do Produto -->
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <input matInput placeholder="Digite a categoria do produto" [formControl]="produtoForm.controls['categoria']"
+          (blur)="updateErrorMessage('categoria')" required />
+        <mat-error *ngIf="produtoForm.controls['categoria'].invalid">{{ errorMessage().categoria }}</mat-error>
+      </mat-form-field>
+  
+      <!-- Código de Barras -->
+      <mat-form-field>
+        <mat-label>Código de Barras</mat-label>
+        <input matInput placeholder="Digite o código de barras" [formControl]="produtoForm.controls['codigoDeBarras']"
+          (blur)="updateErrorMessage('codigoDeBarras')" />
+        <mat-error *ngIf="produtoForm.controls['codigoDeBarras'].invalid">{{ errorMessage().codigoDeBarras }}</mat-error>
+      </mat-form-field>
+  
+      <!-- Estoque Mínimo -->
+      <mat-form-field>
+        <mat-label>Estoque Mínimo</mat-label>
+        <input matInput type="number" placeholder="Digite a quantidade mínima de estoque"
+          [formControl]="produtoForm.controls['estoqueMinimo']" (blur)="updateErrorMessage('estoqueMinimo')" required />
+        <mat-error *ngIf="produtoForm.controls['estoqueMinimo'].invalid">{{ errorMessage().estoqueMinimo }}</mat-error>
+      </mat-form-field>
+  
+      <!-- Data de Última Atualização -->
+      <mat-form-field>
+        <mat-label>Data da Última Atualização</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Escolha a data de última atualização"
+          [formControl]="produtoForm.controls['dataUltimaAtualizacao']"
+          (blur)="updateErrorMessage('dataUltimaAtualizacao')" required />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="produtoForm.controls['dataUltimaAtualizacao'].invalid">{{ errorMessage().dataUltimaAtualizacao
+          }}</mat-error>
+      </mat-form-field>
+  
+  
+    </div>
+  
+    <div class="separadorImage">
+      <div class="form-group file-input-container">
+        <div class="image-preview-container">
+          <img
+            *ngIf="imageSrc; else defaultImage"
+            [src]="imageSrc"
+            alt="Preview da imagem"
+            class="image-preview"
+          />
+          <ng-template #defaultImage>
+            <img src="assets/default-image.png" alt="Imagem padrão" class="image-preview" />
+          </ng-template>
+        </div>
+    
+        <button type="button" mat-raised-button [disabled]="blockButtons" (click)="fileInput.click()">
+          <mat-icon>attach_file</mat-icon>Choose File
+        </button>
+        <input hidden (change)="onFileSelected()" #fileInput type="file" id="file" />
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" [disabled]="blockButtons" (click)="salvarProduto()">Salvar</button>
+    <button mat-raised-button color="warn" (click)="cancelar('produto')">Cancelar</button>
+  </div>
+
+</div>
