@@ -4,7 +4,7 @@ namespace StudioTattooManagement.Models
 {
     public class Fornecedor
     {
-        public int Id { get; set; }
+        public int FornecedorId { get; set; }
 
         [Required]
         public required string Nome { get; set; }

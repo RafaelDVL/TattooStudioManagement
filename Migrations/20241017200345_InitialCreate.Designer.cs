@@ -12,8 +12,8 @@ using StudioTattooManagement.Data;
 namespace StudioTattooManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241014023540_ajustesProdutos")]
-    partial class ajustesProdutos
+    [Migration("20241017200345_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,11 +27,11 @@ namespace StudioTattooManagement.Migrations
 
             modelBuilder.Entity("StudioTattooManagement.Models.Fornecedor", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("FornecedorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FornecedorId"));
 
                     b.Property<string>("ImagemUrl")
                         .HasMaxLength(500)
@@ -46,18 +46,56 @@ namespace StudioTattooManagement.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("Id");
+                    b.HasKey("FornecedorId");
 
                     b.ToTable("Fornecedores", (string)null);
                 });
 
-            modelBuilder.Entity("StudioTattooManagement.Models.Produto", b =>
+            modelBuilder.Entity("StudioTattooManagement.Models.PedidoCompra", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PedidoCompraId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PedidoCompraId"));
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nome_Cliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PedidoCompraId");
+
+                    b.ToTable("PedidoCompra");
+                });
+
+            modelBuilder.Entity("StudioTattooManagement.Models.PedidoCompraProduto", b =>
+                {
+                    b.Property<int>("PedidoCompraId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProdutoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("PedidoCompraId", "ProdutoId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("PedidoCompraProduto");
+                });
+
+            modelBuilder.Entity("StudioTattooManagement.Models.Produto", b =>
+                {
+                    b.Property<int>("ProdutoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProdutoId"));
 
                     b.Property<string>("Categoria")
                         .IsRequired()
@@ -94,11 +132,30 @@ namespace StudioTattooManagement.Migrations
                     b.Property<int>("fornecedor_codigoId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProdutoId");
 
                     b.HasIndex("fornecedor_codigoId");
 
                     b.ToTable("Produtos", (string)null);
+                });
+
+            modelBuilder.Entity("StudioTattooManagement.Models.PedidoCompraProduto", b =>
+                {
+                    b.HasOne("StudioTattooManagement.Models.PedidoCompra", "PedidoCompra")
+                        .WithMany("PedidoCompraProduto")
+                        .HasForeignKey("PedidoCompraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StudioTattooManagement.Models.Produto", "Produto")
+                        .WithMany("PedidoCompraProduto")
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PedidoCompra");
+
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("StudioTattooManagement.Models.Produto", b =>
@@ -136,6 +193,16 @@ namespace StudioTattooManagement.Migrations
             modelBuilder.Entity("StudioTattooManagement.Models.Fornecedor", b =>
                 {
                     b.Navigation("Produtos");
+                });
+
+            modelBuilder.Entity("StudioTattooManagement.Models.PedidoCompra", b =>
+                {
+                    b.Navigation("PedidoCompraProduto");
+                });
+
+            modelBuilder.Entity("StudioTattooManagement.Models.Produto", b =>
+                {
+                    b.Navigation("PedidoCompraProduto");
                 });
 #pragma warning restore 612, 618
         }

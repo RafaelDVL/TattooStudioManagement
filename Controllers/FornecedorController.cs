@@ -98,7 +98,7 @@ namespace StudioTattooManagement.Controllers
                 await _fornecedorService.AddAsync(fornecedor);
                 await _fornecedorService.SaveChangesAsync();
 
-                return CreatedAtAction(nameof(Get), new { id = fornecedor.Id }, fornecedor);
+                return CreatedAtAction(nameof(Get), new { id = fornecedor.FornecedorId }, fornecedor);
             }
             catch (DbUpdateException)
             {

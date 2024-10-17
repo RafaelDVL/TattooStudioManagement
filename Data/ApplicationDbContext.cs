@@ -22,6 +22,7 @@ namespace StudioTattooManagement.Data
 
             modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
             modelBuilder.ApplyConfiguration(new FornecedorConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoCompraProdutoConfiguration());
         }
     }
 }

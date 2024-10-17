@@ -136,7 +136,7 @@ namespace StudioTattooManagement.Controllers
                 await _produtoBase.AddAsync(produto);
                 await _produtoBase.SaveChangesAsync();
 
-                return CreatedAtAction(nameof(Get), new { id = produto.Id }, produto);
+                return CreatedAtAction(nameof(Get), new { id = produto.ProdutoId }, produto);
             }
             catch (DbUpdateException)
             {
@@ -159,7 +159,7 @@ namespace StudioTattooManagement.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (id != produto.Id)
+            if (id != produto.ProdutoId)
                 return BadRequest(new { Message = "O ID do produto não corresponde ao ID fornecido na URL." });
 
             try

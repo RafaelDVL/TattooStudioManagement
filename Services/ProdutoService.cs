@@ -44,9 +44,9 @@ namespace StudioTattooManagement.Services
             if (produto == null)
                 throw new ArgumentNullException(nameof(produto));
 
-            var produtoExistente = _produtoRepository.ObterPorId(produto.Id);
+            var produtoExistente = _produtoRepository.ObterPorId(produto.ProdutoId);
             if (produtoExistente == null)
-                throw new KeyNotFoundException($"Produto com o ID {produto.Id} não foi encontrado.");
+                throw new KeyNotFoundException($"Produto com o ID {produto.ProdutoId} não foi encontrado.");
 
             _produtoRepository.Atualizar(produto);
             _produtoRepository.SaveChanges();

@@ -12,9 +12,9 @@ namespace StudioTattooManagement.Data.Configurations
             builder.ToTable("Produtos");
 
             // Configurações das propriedades
-            builder.HasKey(p => p.Id);
+            builder.HasKey(p => p.ProdutoId);
 
-            builder.Property(p => p.Id)
+            builder.Property(p => p.ProdutoId)
             .ValueGeneratedOnAdd();
 
             builder.Property(p => p.Nome)

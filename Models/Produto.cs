@@ -7,7 +7,7 @@ namespace StudioTattooManagement.Models
     public class Produto
     {
         [Key]
-        public int Id { get; set; }
+        public int ProdutoId { get; set; }
 
         [Required]
         public int fornecedor_codigoId { get; set; }
@@ -21,9 +21,9 @@ namespace StudioTattooManagement.Models
         [Required]
         public Preco Preco { get; set; }
 
-        public int? QuantidadeEmEstoque { get; private set; }
+        public int? QuantidadeEmEstoque { get; set; }
 
-        public DateTime DataUltimaAtualizacao { get; private set; }
+        public DateTime DataUltimaAtualizacao { get; set; }
 
         [Required]
         public string Categoria { get; set; }
@@ -36,7 +36,9 @@ namespace StudioTattooManagement.Models
         // Lista de URLs ou paths das imagens do produto
         public string ImagemUrl { get; set; }
 
-        
+        public List<PedidoCompraProduto> PedidoCompraProduto { get; set; }
+
+
         public virtual Fornecedor? Fornecedor { get; set; }
 
         public Produto()

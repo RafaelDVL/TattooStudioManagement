@@ -17,6 +17,12 @@
     <Compile Remove="Migrations\20241010193801_ajsutes.Designer.cs" />
     <Compile Remove="Migrations\20241010205238_ajsuteProduto.cs" />
     <Compile Remove="Migrations\20241010205238_ajsuteProduto.Designer.cs" />
+    <Compile Remove="Migrations\20241012221939_initial.cs" />
+    <Compile Remove="Migrations\20241012221939_initial.Designer.cs" />
+    <Compile Remove="Migrations\20241014023540_ajustesProdutos.cs" />
+    <Compile Remove="Migrations\20241014023540_ajustesProdutos.Designer.cs" />
+    <Compile Remove="Migrations\20241017175453_ajusteBanco.cs" />
+    <Compile Remove="Migrations\20241017175453_ajusteBanco.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
